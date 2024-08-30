@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 # Load the sample dataset
 try:
-    df = pd.read_csv('C:/Users/shrey/OneDrive/Desktop/nfc cb/chatbot-ml/charity_navigator.csv')
+    df = pd.read_csv('charity_navigator.csv')
     logging.info("Dataset loaded successfully.")
 except Exception as e:
     logging.error(f"Error loading dataset: {e}")
@@ -103,10 +103,10 @@ HTML_TEMPLATE = """
 <body>
     <h1>
         Nayi Disha Chatbot
-    <img src="{{ url_for('static', filename='bitcoin.png') }}" alt="Chatbot Image" id="smallChatImage">
+    <img src="static/bitcoin.png" alt="Chatbot Image" id="smallChatImage">
 </h1>
 <div id="chatbox">
-    <img src="{{ url_for('static', filename='robot-assistant.png') }}" alt="Chatbot Image" id="chatImage">
+    <img src="static/robot-assistant.png" alt="Chatbot Image" id="chatImage">
 </div>
     <input type="text" id="userInput" placeholder="Ask about charities (e.g., 'charities, locations, types etc..')">
     <button id="sendButton">Send</button>
