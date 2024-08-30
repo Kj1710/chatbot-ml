@@ -252,5 +252,3 @@ def charity_info():
 def home():
     return render_template_string(HTML_TEMPLATE)
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5001)
